@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 /*
@@ -139,6 +140,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jButton9 = new javax.swing.JButton();
         cb_eliminar = new javax.swing.JComboBox<>();
+        jPanel4 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -873,6 +875,19 @@ public class Principal extends javax.swing.JFrame {
 
         tab_principal.addTab("Eliminar", jPanel5);
 
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 684, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 430, Short.MAX_VALUE)
+        );
+
+        tab_principal.addTab("Simulacion", jPanel4);
+
         jMenu1.setText("Opciones");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -881,9 +896,19 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jMenuItem1.setText("Abrir");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setText("Guardar");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem2);
 
         Guardar_como.setText("Guardar como");
@@ -1079,6 +1104,29 @@ public class Principal extends javax.swing.JFrame {
         ah.escribirArchivo();
     }//GEN-LAST:event_jButton9MouseClicked
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        if (ah.getArchivo()==null) {
+             JFileChooser destino=new JFileChooser();
+             int seleccion=destino.showSaveDialog(this);
+             if (seleccion==JFileChooser.APPROVE_OPTION) {
+                 ah.setArchivo(destino.getSelectedFile());
+                 ah.escribirArchivo();
+            }
+        }else{
+            
+        }
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        JFileChooser destino=new JFileChooser();
+        int seleccion= destino.showOpenDialog(this);
+        if (seleccion ==JFileChooser.APPROVE_OPTION) {
+             ah.setArchivo(destino.getSelectedFile());
+             ah.cargarArchivoBinario();
+             ah.escribirArchivo();
+        }
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1184,6 +1232,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
