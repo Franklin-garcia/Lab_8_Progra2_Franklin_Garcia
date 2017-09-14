@@ -1,14 +1,18 @@
+
+import java.io.Serializable;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Franklin Garcia
  */
-public class Hadas {
+public class Hadas implements Serializable {
+
+    public static final long SerialVersionUID = 565L;
     private String Nombre;
     private double altura;
     private String edad;
@@ -66,6 +70,9 @@ public class Hadas {
         this.poder = poder;
     }
 
-  
+    @Override
+    public String toString() {
+        return Nombre;
+    }
 
 }

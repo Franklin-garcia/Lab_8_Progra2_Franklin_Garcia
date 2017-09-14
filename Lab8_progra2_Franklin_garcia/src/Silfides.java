@@ -27,5 +27,10 @@ public class Silfides extends Hadas{
     public void setAlas(int alas) {
         this.alas = alas;
     }
+
+    @Override
+    public String toString() {
+        return super.toString(); //To change body of generated methods, choose Tools | Templates.
+    }
    
 }

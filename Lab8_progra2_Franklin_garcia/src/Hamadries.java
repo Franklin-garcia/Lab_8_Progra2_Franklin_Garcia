@@ -27,6 +27,11 @@ public class Hamadries extends Hadas{
     public void setArbol(double arbol) {
         this.arbol = arbol;
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
     
     
 }

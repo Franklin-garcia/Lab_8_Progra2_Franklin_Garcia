@@ -8,12 +8,13 @@
  *
  * @author Franklin Garcia
  */
-public class Lamias extends Hadas{
-  private  int aleta;
-  private  int branquias;
+public class Lamias extends Hadas {
+
+    private int aleta;
+    private int branquias;
 
     public Lamias() {
-    super();
+        super();
     }
 
     public Lamias(int aleta, int branquias, String Nombre, double altura, String edad, double salud, double poder) {
@@ -38,7 +39,9 @@ public class Lamias extends Hadas{
         this.branquias = branquias;
     }
 
+    @Override
+    public String toString() {
+        return super.toString(); //To change body of generated methods, choose Tools | Templates.
+    }
 
-
-  
 }
