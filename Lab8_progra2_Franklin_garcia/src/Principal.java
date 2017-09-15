@@ -950,13 +950,12 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel47.setText("Esquina 2");
 
-        cb_esquina2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cb_esquina2ActionPerformed(evt);
+        jButton11.setText("Comenzar");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
             }
         });
-
-        jButton11.setText("Comenzar");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -1098,8 +1097,8 @@ public class Principal extends javax.swing.JFrame {
         double altura = Double.parseDouble(tf_altura4.getText());
         String edad = tf_edad4.getText();
         int alas = Integer.parseInt(tf_alas4.getText());
-        ah.getListaHadas().add(new Salamandras(alas, nombre, altura, edad, 683.0, 71.0));
-        ah.escribirArchivo();
+        lista.add(new Salamandras(alas, nombre, altura, edad, 683.0, 71.0));
+        ah.setListaHadas(lista);
         JOptionPane.showMessageDialog(this, "hecho");
 
     }//GEN-LAST:event_jButton3MouseClicked
@@ -1110,8 +1109,8 @@ public class Principal extends javax.swing.JFrame {
         String edad = tf_edad1.getText();
         int aletas = Integer.parseInt(cb_aletas1.getSelectedItem().toString());
         int branquias = Integer.parseInt(cb_branqueas1.getSelectedItem().toString());
-        ah.getListaHadas().add(new Lamias(aletas, branquias, nombre, altura, edad, 475.0, 57.0));
-        ah.escribirArchivo();
+        lista.add(new Lamias(aletas, branquias, nombre, altura, edad, 475.0, 57.0));
+        ah.setListaHadas(lista);
         JOptionPane.showMessageDialog(this, "hecho");
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -1119,7 +1118,7 @@ public class Principal extends javax.swing.JFrame {
         String nombre = tf_nombre2.getText();
         double altura = Double.parseDouble(tf_altura2.getText());
         String edad = tf_edad2.getText();
-        ah.getListaHadas().add(new Hamadries(173.0, nombre, altura, edad, 373.0, 78.0));
+        lista.add(new Hamadries(173.0, nombre, altura, edad, 373.0, 78.0));
         ah.escribirArchivo();
         JOptionPane.showMessageDialog(this, "hecho");
     }//GEN-LAST:event_jButton4MouseClicked
@@ -1129,39 +1128,36 @@ public class Principal extends javax.swing.JFrame {
         double altura = Double.parseDouble(tf_altura3.getText());
         String edad = tf_edad3.getText();
         int alas = Integer.parseInt(tf_edad3.getText());
-        ah.getListaHadas().add(new Silfides(alas, nombre, altura, edad, 563.0, 67.0));
-        ah.escribirArchivo();
+        lista.add(new Silfides(alas, nombre, altura, edad, 563.0, 67.0));
+        ah.setListaHadas(lista);
         JOptionPane.showMessageDialog(this, "hecho");
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void tab_modificarStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_tab_modificarStateChanged
 
         if (tab_modificar.getSelectedIndex() == 0) {
-            ah.cargarArchivoBinario();
             String elementos = "";
-            for (Hadas h : ah.getListaHadas()) {
+            for (Hadas h : lista) {
                 if (h instanceof Lamias) {
-                    elementos += ah.getListaHadas().indexOf(h) + " " + h + "\n";
+                    elementos += lista.indexOf(h) + " " + h + "\n";
                 }
             }
             ta_1.setText(elementos);
         }
         if (tab_modificar.getSelectedIndex() == 1) {
-            ah.cargarArchivoBinario();
             String elementos = "";
-            for (Hadas h : ah.getListaHadas()) {
+            for (Hadas h : lista) {
                 if (h instanceof Hamadries) {
-                    elementos += ah.getListaHadas().indexOf(h) + " " + h + "\n";
+                    elementos += lista.indexOf(h) + " " + h + "\n";
                 }
             }
             ta_2.setText(elementos);
         }
         if (tab_modificar.getSelectedIndex() == 2) {
-            ah.cargarArchivoBinario();
             String elementos = "";
-            for (Hadas h : ah.getListaHadas()) {
+            for (Hadas h : lista) {
                 if (h instanceof Silfides) {
-                    elementos += ah.getListaHadas().indexOf(h) + " " + h + "\n";
+                    elementos += lista.indexOf(h) + " " + h + "\n";
                 }
             }
             ta_3.setText(elementos);
@@ -1169,9 +1165,9 @@ public class Principal extends javax.swing.JFrame {
         if (tab_modificar.getSelectedIndex() == 3) {
             ah.cargarArchivoBinario();
             String elementos = "";
-            for (Hadas h : ah.getListaHadas()) {
+            for (Hadas h : lista) {
                 if (h instanceof Salamandras) {
-                    elementos += ah.getListaHadas().indexOf(h) + " " + h + "\n";
+                    elementos += lista.indexOf(h) + " " + h + "\n";
                 }
             }
             ta_4.setText(elementos);
@@ -1186,12 +1182,11 @@ public class Principal extends javax.swing.JFrame {
         String edad = tf_edad5.getText();
         int aletas = Integer.parseInt(cb_aletas5.getSelectedItem().toString());
         int branquias = Integer.parseInt(cb_branqueas5.getSelectedItem().toString());
-        ah.getListaHadas().get(Integer.parseInt(tf_lista1.getText())).setAltura(altura);
-        ah.getListaHadas().get(Integer.parseInt(tf_lista1.getText())).setNombre(nombre);
-        ah.getListaHadas().get(Integer.parseInt(tf_lista1.getText())).setEdad(edad);
-        ((Lamias) ah.getListaHadas().get(Integer.parseInt(tf_lista1.getText()))).setAleta(aletas);
-        ((Lamias) ah.getListaHadas().get(Integer.parseInt(tf_lista1.getText()))).setBranquias(branquias);
-        ah.escribirArchivo();
+        lista.get(Integer.parseInt(tf_lista1.getText())).setAltura(altura);
+        lista.get(Integer.parseInt(tf_lista1.getText())).setNombre(nombre);
+        lista.get(Integer.parseInt(tf_lista1.getText())).setEdad(edad);
+        ((Lamias) lista.get(Integer.parseInt(tf_lista1.getText()))).setAleta(aletas);
+        ((Lamias) lista.get(Integer.parseInt(tf_lista1.getText()))).setBranquias(branquias);
         JOptionPane.showMessageDialog(this, "hecho");
     }//GEN-LAST:event_jButton2MouseClicked
 
@@ -1199,10 +1194,9 @@ public class Principal extends javax.swing.JFrame {
         String nombre = tf_nombre6.getText();
         double altura = Double.parseDouble(tf_altura6.getText());
         String edad = tf_edad6.getText();
-        ah.getListaHadas().get(Integer.parseInt(tf_lista2.getText())).setNombre(nombre);
-        ah.getListaHadas().get(Integer.parseInt(tf_lista2.getText())).setEdad(edad);
-        ah.getListaHadas().get(Integer.parseInt(tf_lista2.getText())).setAltura(altura);
-        ah.escribirArchivo();
+        lista.get(Integer.parseInt(tf_lista2.getText())).setNombre(nombre);
+        lista.get(Integer.parseInt(tf_lista2.getText())).setEdad(edad);
+        lista.get(Integer.parseInt(tf_lista2.getText())).setAltura(altura);
         JOptionPane.showMessageDialog(this, "hecho");
     }//GEN-LAST:event_jButton6MouseClicked
 
@@ -1211,11 +1205,10 @@ public class Principal extends javax.swing.JFrame {
         double altura = Double.parseDouble(tf_altura7.getText());
         String edad = tf_edad7.getText();
         int alas = Integer.parseInt(tf_alas7.getText());
-        ah.getListaHadas().get(Integer.parseInt(tf_lista3.getText())).setNombre(nombre);
-        ah.getListaHadas().get(Integer.parseInt(tf_lista3.getText())).setEdad(edad);
-        ah.getListaHadas().get(Integer.parseInt(tf_lista3.getText())).setAltura(altura);
+        lista.get(Integer.parseInt(tf_lista3.getText())).setNombre(nombre);
+        lista.get(Integer.parseInt(tf_lista3.getText())).setEdad(edad);
+        lista.get(Integer.parseInt(tf_lista3.getText())).setAltura(altura);
         ((Silfides) ah.getListaHadas().get(Integer.parseInt(tf_lista3.getText()))).setAlas(alas);
-        ah.escribirArchivo();
         JOptionPane.showMessageDialog(this, "hecho");
 
 
@@ -1226,43 +1219,38 @@ public class Principal extends javax.swing.JFrame {
         double altura = Double.parseDouble(tf_altura8.getText());
         String edad = tf_edad8.getText();
         int alas = Integer.parseInt(tf_alas8.getText());
-        ah.getListaHadas().get(Integer.parseInt(tf_lista4.getText())).setNombre(nombre);
-        ah.getListaHadas().get(Integer.parseInt(tf_lista4.getText())).setEdad(edad);
-        ah.getListaHadas().get(Integer.parseInt(tf_lista4.getText())).setAltura(altura);
-        ((Salamandras) ah.getListaHadas().get(Integer.parseInt(tf_lista4.getText()))).setAlas(alas);
-        ah.escribirArchivo();
+        lista.get(Integer.parseInt(tf_lista4.getText())).setNombre(nombre);
+        lista.get(Integer.parseInt(tf_lista4.getText())).setEdad(edad);
+        lista.get(Integer.parseInt(tf_lista4.getText())).setAltura(altura);
+        ((Salamandras) lista.get(Integer.parseInt(tf_lista4.getText()))).setAlas(alas);
         JOptionPane.showMessageDialog(this, "hecho");
 
     }//GEN-LAST:event_jButton8MouseClicked
 
     private void tab_principalStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_tab_principalStateChanged
         if (tab_principal.getSelectedIndex() == 2) {
-            ah.cargarArchivoBinario();
             DefaultComboBoxModel modelo = new DefaultComboBoxModel();
-            for (Hadas t : ah.getListaHadas()) {
+            for (Hadas t : lista) {
                 modelo.addElement(t);
             }
             cb_eliminar.setModel(modelo);
         }
         if (tab_principal.getSelectedIndex() == 3) {
-            ah.cargarArchivoBinario();
             DefaultComboBoxModel modelo1 = new DefaultComboBoxModel();
             DefaultComboBoxModel modelo2 = new DefaultComboBoxModel();
-            for (Hadas t : ah.getListaHadas()) {
+            for (Hadas t : lista) {
                 modelo1.addElement(t);
                 modelo2.addElement(t);
             }
             cb_esquina1.setModel(modelo1);
-            cb_esquina2.setModel(modelo2); 
+            cb_esquina2.setModel(modelo2);
         }
 
 
     }//GEN-LAST:event_tab_principalStateChanged
 
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
-        ah.cargarArchivoBinario();
-        ah.getListaHadas().remove(cb_eliminar.getSelectedIndex());
-        ah.escribirArchivo();
+        lista.remove(cb_eliminar.getSelectedIndex());
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -1284,7 +1272,7 @@ public class Principal extends javax.swing.JFrame {
         if (seleccion == JFileChooser.APPROVE_OPTION) {
             ah.setArchivo(destino.getSelectedFile());
             ah.cargarArchivoBinario();
-            ah.escribirArchivo();
+            lista = ah.getListaHadas();
         }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
@@ -1314,9 +1302,9 @@ public class Principal extends javax.swing.JFrame {
                 + "por que ellos tambien lo sienten \n");
     }//GEN-LAST:event_jButton10MouseClicked
 
-    private void cb_esquina2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_esquina2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cb_esquina2ActionPerformed
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+
+    }//GEN-LAST:event_jButton11MouseClicked
 
     /**
      * @param args the command line arguments
