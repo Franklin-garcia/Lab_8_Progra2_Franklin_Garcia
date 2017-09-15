@@ -12,8 +12,8 @@ import javax.swing.JProgressBar;
  */
 public class Hilo extends Thread {
 
-    private JProgressBar barra1;
-    private JProgressBar barra2;
+     JProgressBar barra1;
+    JProgressBar barra2;
     Hadas jugador1;
     Hadas jugador2;
 
@@ -28,21 +28,7 @@ public class Hilo extends Thread {
         this.jugador2 = jugador2;
     }
 
-    public JProgressBar getBarra1() {
-        return barra1;
-    }
 
-    public void setBarra1(JProgressBar barra1) {
-        this.barra1 = barra1;
-    }
-
-    public JProgressBar getBarra2() {
-        return barra2;
-    }
-
-    public void setBarra2(JProgressBar barra2) {
-        this.barra2 = barra2;
-    }
 
     public Hadas getJugador1() {
         return jugador1;
@@ -59,6 +45,11 @@ public class Hilo extends Thread {
     public void setJugador2(Hadas jugador2) {
         this.jugador2 = jugador2;
     }
+        @Override
+    public String toString() {
+        return "ThreadBatallas{" + "player1=" + jugador1 + ", player2=" + jugador2 + '}';
+    }
+    
 
     public boolean vive1 = true;
     public boolean vive2 = true;

@@ -153,8 +153,8 @@ public class Principal extends javax.swing.JFrame {
         jLabel47 = new javax.swing.JLabel();
         cb_esquina1 = new javax.swing.JComboBox<>();
         cb_esquina2 = new javax.swing.JComboBox<>();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jProgressBar2 = new javax.swing.JProgressBar();
+        pg1 = new javax.swing.JProgressBar();
+        pg2 = new javax.swing.JProgressBar();
         jButton11 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -307,7 +307,7 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jLabel14))
                 .addGap(59, 59, 59)
                 .addComponent(jButton1)
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addContainerGap(179, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Lamias", jPanel2);
@@ -362,7 +362,7 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(tf_edad2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(134, 134, 134)
                 .addComponent(jButton4)
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Hamadries", jPanel6);
@@ -427,7 +427,7 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(tf_alas3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
                 .addComponent(jButton5)
-                .addContainerGap(222, Short.MAX_VALUE))
+                .addContainerGap(232, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Silfides", jPanel7);
@@ -492,7 +492,7 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(tf_alas4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(93, 93, 93)
                 .addComponent(jButton3)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(180, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Salamandras", jPanel8);
@@ -618,7 +618,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_lista1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel36))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(88, 88, 88))
         );
@@ -704,7 +704,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_lista2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addComponent(jButton6)
                 .addGap(116, 116, 116))
         );
@@ -801,7 +801,7 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jLabel40))
                 .addGap(50, 50, 50)
                 .addComponent(jButton7)
-                .addContainerGap(161, Short.MAX_VALUE))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
 
         tab_modificar.addTab("Silfides", jPanel10);
@@ -892,7 +892,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel42)
                     .addComponent(tf_lista4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
                 .addComponent(jButton8)
                 .addGap(110, 110, 110))
         );
@@ -933,7 +933,7 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addComponent(jLabel26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
                 .addComponent(cb_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(98, 98, 98)
                 .addComponent(jButton9)
@@ -970,12 +970,12 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pg1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cb_esquina1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cb_esquina2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pg2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(104, 104, 104))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1008,14 +1008,14 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addComponent(cb_esquina2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(pg1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(64, 64, 64))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                        .addComponent(pg2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(168, 168, 168))
         );
@@ -1304,6 +1304,111 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
 
+        if (ap1.getJugador1() instanceof Hamadries && ap2.getJugador2() instanceof Salamandras) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap1.start();
+            ap2.start();
+        }
+        if (ap1.getJugador1() instanceof Hamadries && ap2.getJugador2() instanceof Hamadries) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+
+            ap1.start();
+            ap2.start();
+        }
+
+        if (ap1.getJugador1() instanceof Salamandras && ap2.getJugador2() instanceof Silfides) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+
+            ap1.start();
+            ap2.start();
+        }
+        if (ap1.getJugador1() instanceof Salamandras && ap2.getJugador2() instanceof Hamadries) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+
+            ap1.start();
+            ap2.start();
+        }
+        if (ap1.getJugador1() instanceof Salamandras && ap2.getJugador2() instanceof Salamandras) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+
+            ap1.start();
+            ap2.start();
+        }
+        if (ap1.getJugador1() instanceof Hamadries && ap2.getJugador2() instanceof Lamias) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap1.start();
+            ap2.start();
+        }
+        if (ap1.getJugador1() instanceof Hamadries && ap2.getJugador2() instanceof Silfides) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap1.start();
+            ap2.start();
+        }
+
+        if (ap1.getJugador1() instanceof Lamias && ap2.getJugador2() instanceof Salamandras) {
+            ap1 = new Hilo(pg1, pg2,
+                    (Hadas) cb_esquina1.getSelectedItem(),
+                    (Hadas) cb_esquina2.getSelectedItem());
+            ap1.start();
+            ap2.start();
+        }
+        if (ap1.getJugador1() instanceof Salamandras && ap2.getJugador2() instanceof Lamias) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+
+            ap1.start();
+            ap2.start();
+        }
+
+        if (ap1.getJugador1() instanceof Lamias && ap2.getJugador2() instanceof Hamadries) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+
+            ap1.start();
+            ap2.start();
+        }
+        if (ap1.getJugador1() instanceof Lamias && ap2.getJugador2() instanceof Lamias) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+
+            ap1.start();
+            ap2.start();
+        }
+        if (ap1.getJugador1() instanceof Silfides && ap2.getJugador2() instanceof Lamias) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+
+            ap1.start();
+            ap2.start();
+        }
+        if (ap1.getJugador1() instanceof Silfides && ap2.getJugador2() instanceof Salamandras) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+
+            ap1.start();
+            ap2.start();
+        }
+        if (ap1.getJugador1() instanceof Silfides && ap2.getJugador2() instanceof Hamadries) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+
+            ap1.start();
+            ap2.start();
+        }
+        if (ap1.getJugador1() instanceof Silfides && ap2.getJugador2() instanceof Silfides) {
+            ap1 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+            ap2 = new Hilo(pg1, pg2, (Hadas) cb_esquina1.getSelectedItem(), (Hadas) cb_esquina2.getSelectedItem());
+
+            ap1.start();
+            ap2.start();
+        }
     }//GEN-LAST:event_jButton11MouseClicked
 
     /**
@@ -1427,8 +1532,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JProgressBar jProgressBar1;
-    private javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1437,6 +1540,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JDialog jd_sobre;
+    private javax.swing.JProgressBar pg1;
+    private javax.swing.JProgressBar pg2;
     private javax.swing.JTextArea ta_1;
     private javax.swing.JTextArea ta_2;
     private javax.swing.JTextArea ta_3;
@@ -1478,4 +1583,6 @@ public class Principal extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 AdminHadas ah = new AdminHadas("./hadas.cbm");
     ArrayList<Hadas> lista = new ArrayList();
+    Hilo ap1;
+    Hilo ap2;
 }
